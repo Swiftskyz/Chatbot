@@ -1,5 +1,7 @@
 package chat.controller;
 
+import java.io.IOException;
+
 import javax.swing.JOptionPane;
 
 //import section
@@ -8,6 +10,7 @@ import javax.swing.JOptionPane;
 //import javax.swing.JTextArea;
 //import javax.swing.JTextField;
 import chat.model.Chatbot;
+import chat.view.ChatFrame;
 
 public class ChatController
 {
@@ -40,6 +43,18 @@ public class ChatController
 	public String useChatbotCheckers(String text)
 	{
 		return null;
+	}
+
+	public void handleErrors(IOException error)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void handleErrors(Exception genericError)
+	{
+		// TODO Auto-generated method stub
+		
 	}
 
 	
