@@ -1,7 +1,5 @@
 package chat.model;
 
-import chat.controller.ChatController;
-import twitter4j.Twitter;
 import java.util.Scanner;
 import java.util.List;
 import java.util.Map;
@@ -21,10 +19,18 @@ import twitter4j.Status;
 
 import chat.controller.IOController;
 
-public class ChatTwitter
-{
-	private ChatController app;
-	private Twitter ChatTwitter;
+	public class ChatTwitter
+	{
+		private ChatController app;
+		private Twitter chatTwitter;
+	}
+	
+	public ChatTwitter(ChatController app)
+	{
+		this.app = app;
+		this.chatTwitter = TwitterFactory.getSingleton();
+	}
+	{
 	private List<Status> searchedTweets;
 	private List<String> tweetedWords;
 	private long totalWordCount;
@@ -34,6 +40,8 @@ public class ChatTwitter
 	this.tweetedWords = new ArrayList<String>();
 	this.wordsAndCount = new HashMap<String, Integer>();
 	this.totalWordCount = 0;
+	}
+	}
 	
 	public void sendTweet(String textToTweet)
 	{
@@ -253,10 +261,3 @@ public class ChatTwitter
 		
 		return mostCommon;
 	}
-	
-	public ChatTwitter(ChatController app)
-	{
-		this.app = app;
-	}
-
-}
