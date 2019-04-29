@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="twitter4j-core-4.0.7.jar">
+	<classpathentry kind="lib" path="/Users/shim6662/Downloads/twitter4j-4.0.7.zip">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

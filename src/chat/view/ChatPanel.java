@@ -73,6 +73,14 @@ import chat.controller.IOController;
 			}
 		});
 		
+		tweetButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String textToTweet = chatField.getText().trim();
+				appController.tweet(textToTweet);
+			}
+		});
 		
 	}
 
@@ -101,6 +109,7 @@ import chat.controller.IOController;
 		this.add(chatButton);
 		this.add(saveButton);
 		this.add(loadButton);
+		this.add(tweetButton);
 		this.add(checkerButton);
 		this.add(chatField);
 	}
