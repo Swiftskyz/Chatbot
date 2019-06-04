@@ -131,10 +131,10 @@ import chat.controller.IOController;
 	private String [] createIgnoredWordArray()
 	{
 		String [] boringWords;
-		String fileText = IOController.loadFromFile(app, "commonWords.txt");
+//		String fileText = IOController.loadFromFile(app, "commonWords.txt");
 		int wordCount = 0;
 		
-		Scanner wordScanner = new Scanner(fileText);
+		Scanner wordScanner = new Scanner(this.getClass().getResourceAsStream("data/commonWords.txt"));
 		
 		while(wordScanner.hasNextLine())
 		{
@@ -244,7 +244,8 @@ import chat.controller.IOController;
 		trimTheBoringWords(boring);
 		generateWordCount();
 
-		ArrayList<Map.Entry<String, Integer>> sorted = sortHashMap();	    
+		ArrayList<Map.Entry<String, Integer>> sorted = sortHashMap();	   
+		
 		String mostCommonWord = sorted.get(0).getKey();
 		int maxWord = 0;
 		
